@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<title>Cube Solver</title>
+</head><body>
+<!--
+THESIS: the solve is a route across a railway signal-box mimic panel, not a lesson sidebar; refuses the sidebar-plus-button-bar default.
+OWN-WORLD: matte graphite panel, thin white track lines bending only at 45 and 90 degrees, lit rail = done, one amber lamp = the next move, condensed caps legends, tabular mono notation, hardware route buttons.
+STORY: an experienced cuber copies the scramble, then follows the CFOP route one move at a time and sees every alg named and written.
+FIRST VIEWPORT: left 420px track Cross-F2L-OLL-PLL with the current alg as a lit describer window; centre cube; scramble strip top-centre; Previous / Next / Full solve / Rescramble console bottom-centre.
+FORM: assigned direction 6 of own list (operate-b exposure record sheets), realised as a signal-box mimic; seed 8db441d1.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<div class="app">
+  <aside class="panel" id="panel" aria-label="CFOP solution route"></aside>
+  <main class="stage">
+    <header class="scramble" id="scramble">
+      <div class="scr-head"><span class="legend">Scramble</span>
+        <button class="link" id="btn-prevscr" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>Previous scramble</span></button></div>
+      <div class="tokens" aria-label="Scramble notation"></div></header>
+    <div id="canvas-host"></div>    <nav class="console" aria-label="Solution controls">
+      <button class="btn" id="btn-prev" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M19 5l-9 7 9 7z"/></svg><span>Previous</span></button>
+      <button class="btn" id="btn-next" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5v14M5 5l9 7-9 7z"/></svg><span>Next</span></button>
+      <button class="btn primary" id="btn-play" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l7 7-7 7zM13 5l7 7-7 7z"/></svg><span>Full solve</span></button>
+      <label class="speed" for="delay"><span class="legend">Delay</span>
+        <input id="delay" type="range" min="0" max="1500" step="50" value="200" aria-describedby="delay-out">
+        <output id="delay-out">200 ms</output></label>
+      <button class="btn" id="btn-scramble" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg><span>Rescramble</span></button>
+    </nav>
+  </main>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body></html>

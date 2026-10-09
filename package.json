@@ -1,0 +1,8 @@
+{
+  "name": "rubiks-cube-solver",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "vite build", "test": "node --test" },
+  "dependencies": { "three": "0.170.0" },
+  "devDependencies": { "vite": "5.4.11" }
+}
